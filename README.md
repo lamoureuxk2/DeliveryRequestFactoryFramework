@@ -1,6 +1,6 @@
 # Implementation Description
 
-This application will use a Factory style creational pattern to create Delivery requests, which will be sent to drivers.
+This application will use a Factory style creational pattern to create Delivery requests, which will be sent to drivers. The application will serve as a factory for Delivery Requests.
 There will be four classes in this project: Shop, Delivery Request, Driver, and Main.
 
 Driver class will have data fields for name (final String) and current request (DeliveryRequest). The setter method for the Request will only set a new request if there is not currently one. The method will return a boolean, true if a new request was taken, false if the request was rejected. The constructor will take in a String for the driver's name.
@@ -10,6 +10,10 @@ Delivery Request object will have data fields for Description (String), Shop nam
 Shop object will have data fields for name (final String), address (final String). There will be getters for these fields. The constructor will take in two strings, to set the data fields. It will have a method for creating a Delivery Request that takes in a String for the Description and String for the delivery Address. It will then call the Delivery Request Contructor and return the instance of the DeliveryRequest. 
 
 Main will have a List of all available Drivers and all available shops. It will create 3 drivers and one shop in the initial version of this project. It will use a method to search the shop array for a specific shop, and call its makeRequest method with a hard coded description. The main class will then use a method to broadcast the returned request to all drivers, and it will be assigned to the first available driver.
+
+Flexibility: The code will be able to work with more drivers and shops if more were to be added. Functionality could be add or remove drivers and shops during runtime.
+
+Understandibility and avoiding duplication: This code is clean and intuitive. Most of the code is wrapped in methods with intuitive names. 
 
 # Project Template
 
