@@ -1,3 +1,14 @@
+# Implementation Description
+
+This application will use a Factory style creational pattern to create Delivery requests, which will be sent to drivers.
+There will be four classes in this project: Shop, Delivery Request, Driver, and Main.
+
+Driver class will have data fields for name (final String) and current request (DeliveryRequest). The setter method for the Request will only set a new request if there is not currently one. The method will return a boolean, true if a new request was taken, false if the request was rejected.
+
+Delivery Request object will have data fields for Description (String), Shop name (String), and delivery address (String). There will be standard getters and setters for each.
+
+Shop object will have 
+
 # Project Template
 
 This is a Java Maven Project Template
