@@ -10,6 +10,9 @@ public class TestDeliveryApp {
 	static ArrayList<Shop> shops = MainDeliveryApp.shops;
 	static ArrayList<Driver> drivers = MainDeliveryApp.drivers;
 	 
+	/**
+	 * Tests if request is successfully assigned, rechecks all drivers to check if request is held by a driver.
+	 */
 	@Test
 	public void testSuccessfulRequest() {
 		shops.clear();
@@ -33,6 +36,9 @@ public class TestDeliveryApp {
 		assertTrue(requestInDriverList);
 	}
 	
+	/**
+	 * Gives all Drivers requests. Tests that an attempt at assigning another will be rejected.
+	 */
 	@Test
 	public void testFailIfDriversOccupied() {
 		MainDeliveryApp.clearRequests();
@@ -43,6 +49,9 @@ public class TestDeliveryApp {
 		assertFalse(MainDeliveryApp.assignRequest(new DeliveryRequest("Shop1", "Food", "Valid addr")));
 	}
 	
+	/**
+	 * Tests that a null request object is returned if an invalid shop name is used.
+	 */
 	@Test
 	public void testNullIfWrongShopName() {
 		shops.clear();

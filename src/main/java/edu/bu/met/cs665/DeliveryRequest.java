@@ -1,5 +1,10 @@
 package edu.bu.met.cs665;
 
+/**
+ * Delivery Request Object, represented by 3 Strings, a shopName, delivery address, and Description of the order
+ * @author lamoureuxk
+ *
+ */
 public class DeliveryRequest {
 	
 	private String shopName;
@@ -24,6 +29,11 @@ public class DeliveryRequest {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	@Override
+	public String toString() {
+		return "Request from " + shopName + "\nDelivery: " + description + "\nTo: " + address;
 	}
 
 }

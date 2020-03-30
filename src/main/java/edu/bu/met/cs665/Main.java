@@ -5,7 +5,7 @@ public class Main {
 
 
   /**
-   * A main method to run examples.
+   * Runs MainDeliveryApp.java 's main method
    *
    * @param args not used
    */
